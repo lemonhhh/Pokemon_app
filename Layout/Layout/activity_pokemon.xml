@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PokemonActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Pokemon_picture" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pokemon_name"
+            android:textAlignment="center"
+            android:textSize="26dp"
+            android:paddingTop="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pokemon_number"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:paddingTop="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pokemon_type1"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:paddingTop="5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pokemon_type2"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="50dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_view" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Photo"
+            android:paddingTop="5dp"
+            android:onClick="choosePhoto"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Different Filters"
+            android:paddingTop="10dp"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:paddingBottom="20dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sepia"
+                android:textColor="#8B4513"
+                android:paddingTop="5dp"
+                android:onClick="applySepia"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toon"
+                android:textColor="#228B22"
+                android:paddingTop="5dp"
+                android:onClick="applyToon"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sketch"
+                android:textColor="#F4A460"
+                android:paddingTop="5dp"
+                android:onClick="applySketch"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contrast"
+                android:textColor="#B83B5E"
+                android:onClick="applyContrast"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Invert"
+                android:textColor="#6A2C70"
+                android:onClick="applyInvert"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pixelation"
+                android:textColor="#0fabbc"
+                android:onClick="applyPixelation"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Swirl"
+                android:textColor="#ff847c"
+                android:onClick="applySwirl"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brightness"
+                android:textColor="#6a197d"
+                android:onClick="applyBrightness"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kuwahara"
+                android:textColor="#f54291"
+                android:onClick="applyKuwahara"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vignette"
+                android:textColor="#bac964"
+                android:onClick="applyVignette"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grayscale"
+                android:textColor="#111d5e"
+                android:onClick="applyGrayscale"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blur"
+                android:textColor="#1E90FF"
+                android:onClick="applyBlur"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Notes"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler_view_1" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_note_button"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="10dp"
+            app:srcCompat="@android:drawable/ic_input_add"
+            android:tint="@color/cardview_light_background"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

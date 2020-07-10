@@ -1,6 +1,6 @@
 # Pokemon_app
 
-项目报告:
+项目报告:https://jbox.sjtu.edu.cn/l/MoZxP3
 
 Slides:https://jbox.sjtu.edu.cn/l/XH2Kzv
 
